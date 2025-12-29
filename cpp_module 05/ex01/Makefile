@@ -2,7 +2,7 @@ CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 
 
 NAME = Bureaucrat
-SRC = Bureaucrat.cpp main.cpp
+SRC = Bureaucrat.cpp main.cpp Form.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
@@ -10,7 +10,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 	
-%.o: %.cpp Bureaucrat.hpp
+%.o: %.cpp Bureaucrat.hpp Form.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 clean:
 	rm -f $(OBJ)
