@@ -6,7 +6,7 @@ std::string const Bureaucrat::get_name() const {return name;}
 
 int Bureaucrat::get_grade() const {return grade;}
 
-Bureaucrat::Bureaucrat() : name("x"), grade(1)
+Bureaucrat::Bureaucrat() : name("x"), grade(2)
 {
     if (grade > 150)
         throw GradeTooLowException();

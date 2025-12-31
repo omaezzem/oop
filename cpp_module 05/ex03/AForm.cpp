@@ -1,12 +1,12 @@
 #include "AForm.hpp"
 #include "Bureaucrat.hpp"
 
-std::string const AForm::get_name() const { return name; }
-bool AForm::get_is_signed() const { return is_signed; }
-int AForm::get_grade_sign() const { return grade_sign; }
-int AForm::get_grade_exec() const { return grade_exec; }
+std::string const AForm::get_name() const {return name;}
+bool AForm::get_is_signed() const {return is_signed;}
+int AForm::get_grade_sign() const {return grade_sign;}
+int AForm::get_grade_exec() const {return grade_exec;}
 
-AForm::AForm() : name("xform"), is_signed(false), grade_sign(3), grade_exec(2)
+AForm::AForm() : name("xform"), is_signed(false), grade_sign(3), grade_exec(140)
 {
     if (grade_exec > 150 || grade_sign > 150)
         throw Bureaucrat::GradeTooLowException();

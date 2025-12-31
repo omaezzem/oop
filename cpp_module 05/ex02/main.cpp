@@ -1,15 +1,19 @@
-#include "Form.hpp"
+#include "AForm.hpp"
 #include "Bureaucrat.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 int main()
 {
+    Bureaucrat bob("Bob", 1);
+    ShrubberyCreationForm form("garden");
     try
     {
-        Form f;
-        Bureaucrat b;
-        f.beSigned(b);
-        b.signForm(f);
-        std::cout << f <<std::endl;
+        form.beSigned(bob);
+        std::cout << "Form signed successfully." << std::endl;
+        form.execute(bob);
+        std::cout << "Form executed successfully." << std::endl;
     }
     catch(Bureaucrat::GradeTooHightException &b)
     {
